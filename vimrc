@@ -1,5 +1,6 @@
 " Pathogen to auto install plugins in ~/vim/bundle
 call pathogen#infect()
+call pathogen#helptags()
 
 " When vimrc is edited, reload vim
 au! BufWritePost .vimrc source $MYVIMRC
@@ -73,8 +74,24 @@ nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
-set clipboard=unnamed
 
 set pastetoggle=<F2>
 map + <c-w>+
 map - <c-w>-
+
+" Omnicomplete fixes
+
+" Complete as you type
+set completeopt=longest,menuone
+
+let g:ackprg = 'ag --nogroup --nocolor --column'
+set noerrorbells
+set visualbell
+set lazyredraw
+set laststatus=2
+autocmd FileType python set omnifunc=pythoncomplete#Complete
+autocmd FileType java set omnifunc=javacomplete#Complete
+
+
+set clipboard=unnamed
+
