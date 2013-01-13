@@ -2,8 +2,6 @@
 call pathogen#infect()
 call pathogen#helptags()
 
-" When vimrc is edited, reload vim
-au! BufWritePost .vimrc source $MYVIMRC
 autocmd BufRead,BufNewFile *.tac set filetype=python
 
 " Make is possible to delete previous entries with backspace
@@ -11,7 +9,6 @@ set backspace=indent,eol,start
 
 set number " Show line numbers
 set ruler " Show current position in status
-
 
 " Don't use backup or swapfiles
 set nobackup
@@ -42,20 +39,20 @@ filetype plugin indent on
 syntax on
 
 " Set colorscheme
-" colorscheme wombat256mod
+colorscheme wombat256mod
 set t_Co=256
 
 " Don't wrap lineendings
 set nowrap
 
 " Ignore the follwing files in CommandT
-set wildignore+=*.pyc,*.orig,*.egg-info,*.class
+set wildignore+=*.pyc,*.orig,*.egg-info,*.class,*.jar
 
 " Highligh searches
 set hlsearch
 
 " See tabs
-" set list listchars=tab:\ \ ,trail:·
+set list listchars=tab:\ \ ,trail:·
 
 " write buffer when leaving
 set autowrite
@@ -79,8 +76,6 @@ set pastetoggle=<F2>
 map + <c-w>+
 map - <c-w>-
 
-" Omnicomplete fixes
-
 " Complete as you type
 set completeopt=longest,menuone
 
@@ -92,6 +87,4 @@ set laststatus=2
 autocmd FileType python set omnifunc=pythoncomplete#Complete
 autocmd FileType java set omnifunc=javacomplete#Complete
 
-
 set clipboard=unnamed
-

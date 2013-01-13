@@ -1,0 +1,30 @@
+[submodule "bundle/Command-T"]
+	path = bundle/Command-T
+	url = git@github.com:wincent/Command-T.git
+[submodule "bundle/ack.vim"]
+	path = bundle/ack.vim
+	url = git@github.com:mileszs/ack.vim.git
+[submodule "bundle/pyflakes-pathogen"]
+	path = bundle/pyflakes-pathogen
+	url = git@github.com:mitechie/pyflakes-pathogen.git
+[submodule "bundle/supertab"]
+	path = bundle/supertab
+	url = git@github.com:ervandew/supertab.git
+[submodule "bundle/vim-fugitive"]
+	path = bundle/vim-fugitive
+	url = git@github.com:tpope/vim-fugitive.git
+[submodule "bundle/vim-coffee-script"]
+	path = bundle/vim-coffee-script
+	url = git@github.com:kchmck/vim-coffee-script.git
+[submodule "bundle/vim-powerline"]
+	path = bundle/vim-powerline
+	url = git@github.com:Lokaltog/vim-powerline.git
+[submodule "bundle/vim-ruby"]
+	path = bundle/vim-ruby
+	url = git@github.com:vim-ruby/vim-ruby.git
+[submodule "bundle/vim-scala"]
+	path = bundle/vim-scala
+	url = git@github.com:bmatheny/vim-scala.git
+[submodule "bundle/wombat256"]
+	path = bundle/wombat256
+	url = git@github.com:vim-scripts/wombat256.vim.git

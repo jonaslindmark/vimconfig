@@ -12,5 +12,6 @@ Install notes
 
 - git clone to .vim folder in $HOME
 - ln -s ~/.vim/vimrc ~/.vimrc
+- git submodule init
+- git submodule update
 - cd ~/.vim/bundle/Command-T/ruby; ruby extconf.rb; make
-
