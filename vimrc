@@ -79,7 +79,6 @@ map - <c-w>-
 " Complete as you type
 set completeopt=longest,menuone
 
-let g:ackprg = 'ag --nogroup --nocolor --column'
 set noerrorbells
 set visualbell
 set lazyredraw
@@ -88,3 +87,6 @@ autocmd FileType python set omnifunc=pythoncomplete#Complete
 autocmd FileType java set omnifunc=javacomplete#Complete
 
 set clipboard=unnamed
+let Tlist_Ctags_Cmd='/opt/local/bin/ctags'
+set tags=/Users/jonasl/src/wrapp/tags
+let g:pyflakes_use_quickfix = 0
