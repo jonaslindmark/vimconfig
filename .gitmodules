@@ -28,3 +28,6 @@
 [submodule "bundle/wombat256"]
 	path = bundle/wombat256
 	url = git@github.com:vim-scripts/wombat256.vim.git
+[submodule "bundle/vim-virtualenv"]
+	path = bundle/vim-virtualenv
+	url = git@github.com:jmcantrell/vim-virtualenv.git
