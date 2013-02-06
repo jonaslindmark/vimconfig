@@ -90,3 +90,4 @@ set clipboard=unnamed
 let Tlist_Ctags_Cmd='/opt/local/bin/ctags'
 set tags=/Users/jonasl/src/wrapp/tags
 let g:pyflakes_use_quickfix = 0
+let g:ctrlp_working_path_mode = ''
