@@ -46,7 +46,7 @@ set t_Co=256
 set nowrap
 
 " Ignore the follwing files in CommandT
-set wildignore+=*.pyc,*.orig,*.egg-info,*.class,*.jar
+set wildignore+=*.pyc,*.orig,*.egg-info,*.class,*.jar,tags
 
 " Highligh searches
 set hlsearch
