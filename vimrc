@@ -27,6 +27,7 @@ au FileType python set softtabstop=4 tabstop=4 shiftwidth=4
 au BufRead,BufNewFile {Gemfile,Rakefile,Vagrantfile,Thorfile,config.ru} set ft=ruby
 au BufRead,BufNewFile *.hamlc set ft=haml
 au BufNewFile,BufRead *.json set ft=javascript
+au BufNewFile,BufRead *.ejs set ft=html
 
 " Enable backspace outside of newly inserted text
 set nocompatible
@@ -36,7 +37,7 @@ let mapleader = ','
 filetype plugin indent on
 
 " Enable syntax highlighting
-syntax on
+syntax enable
 
 " Set colorscheme
 colorscheme wombat256mod
@@ -45,8 +46,8 @@ set t_Co=256
 " Don't wrap lineendings
 set nowrap
 
-" Ignore the follwing files in CommandT
-set wildignore+=*.pyc,*.orig,*.egg-info,*.class,*.jar,tags
+" Ignore the following files
+set wildignore+=*.pyc,*.orig,*.egg-info,*.class,*.jar,tags,*node_modules*
 
 " Highligh searches
 set hlsearch
@@ -91,3 +92,16 @@ let Tlist_Ctags_Cmd='/opt/local/bin/ctags'
 set tags=/Users/jonasl/src/wrapp/tags
 let g:pyflakes_use_quickfix = 0
 let g:ctrlp_working_path_mode = ''
+let g:ctrlp_clear_cache_on_exit = 0
+
+function! InsertDebug()
+    exe "normal Oimport ipdb;ipdb.set_trace()\e"
+endfunction
+command! DebugIt :call InsertDebug()
+
+map <Leader>g !python -m json.tool<CR>
+map <Leader>t :tabnew<CR>
+map <Leader>s :mksession!<CR>
+
+set ssop-=options    " do not store global and local values in a session
+set ssop-=folds      " do not store folds
