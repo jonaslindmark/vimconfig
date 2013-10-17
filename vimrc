@@ -70,9 +70,11 @@ map + <c-w>+
 map - <c-w>-
 
 autocmd FileType python set omnifunc=pythoncomplete#Complete
+au FileType ruby setl sw=2 sts=2 et
 
 map <Leader>g !python -m json.tool<CR>
 map <Leader>t :tabnew<CR>
+map <Leader>n :NERDTree<CR>
 map <Leader>s :mksession!<CR>
 nmap <leader>a :Ag! 
 

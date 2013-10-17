@@ -1,17 +1,24 @@
-vimconfig
+dotfiles
 =========
 
-My plugins and vimrc
+Mainly my vim setup.
 
-Notes
+Also tmux and zsh conf
+
+Requirements
 ==================
-Requires vim to be compiled with ruby and python support
+vim --version
++python
++ruby
 
 Install notes
 ==================
 
-- git clone to .vim folder in $HOME
+- git clone git@github.com:jonaslindmark/vimconfig.git ~/.vim
+- in ~/.vim
+    - git submodule init
+    - git submodule update
 - ln -s ~/.vim/vimrc ~/.vimrc
-- git submodule init
-- git submodule update
-- cd ~/.vim/bundle/Command-T/ruby; ruby extconf.rb; make
+- ln -s ~/.vim/tmux.conf ~/.tmux.conf
+- echo "source ~/.vim/zshrc" >> ~/.zshrc
+
