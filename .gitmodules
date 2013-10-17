@@ -49,3 +49,6 @@
 [submodule "bundle/vim-vimwiki"]
 	path = bundle/vim-vimwiki
 	url = git@github.com:vim-scripts/vimwiki.git
+[submodule "bundle/presenting"]
+	path = bundle/presenting
+	url = git@github.com:sotte/presenting.vim.git
