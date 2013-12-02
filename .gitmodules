@@ -52,3 +52,6 @@
 [submodule "bundle/presenting"]
 	path = bundle/presenting
 	url = git@github.com:sotte/presenting.vim.git
+[submodule "bundle/vim-colorschemes"]
+	path = bundle/vim-colorschemes
+	url = git@github.com:flazz/vim-colorschemes.git
