@@ -5,8 +5,7 @@ call pathogen#helptags()
 autocmd BufRead,BufNewFile *.tac set filetype=python
 
 syntax enable
-set background=light
-colorscheme solarized
+colorscheme molokai
 
 set backspace=indent,eol,start " Make is possible to delete previous entries with backspace
 set number " Show line numbers
@@ -91,7 +90,10 @@ let g:ctrlp_follow_symlinks = 1
 let g:ctrlp_working_path_mode = ''
 let g:ctrlp_clear_cache_on_exit = 0
 
+let NERDTreeIgnore = ['\.pyc$']
+
 function! InsertDebug()
     exe "normal Oimport ipdb;ipdb.set_trace()\e"
 endfunction
 command! DebugIt :call InsertDebug()
+
