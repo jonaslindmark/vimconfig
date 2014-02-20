@@ -25,27 +25,12 @@
 [submodule "bundle/vim-virtualenv"]
 	path = bundle/vim-virtualenv
 	url = git@github.com:jmcantrell/vim-virtualenv.git
-[submodule "bundle/ag.vim"]
-	path = bundle/ag.vim
-	url = git@github.com:epmatsw/ag.vim.git
 [submodule "bundle/ctrlp"]
 	path = bundle/ctrlp
 	url = git@github.com:kien/ctrlp.vim.git
-[submodule "bundle/go.vim"]
-	path = bundle/go.vim
-	url = git@github.com:anzaika/go.vim.git
-[submodule "bundle/VimClojure"]
-	path = bundle/VimClojure
-	url = git@github.com:vim-scripts/VimClojure.git
 [submodule "bundle/vim-handlebars"]
 	path = bundle/vim-handlebars
 	url = git://github.com/nono/vim-handlebars.git
-[submodule "bundle/vim-colors-solarized"]
-	path = bundle/vim-colors-solarized
-	url = git@github.com:altercation/vim-colors-solarized.git
-[submodule "bundle/nerdtree"]
-	path = bundle/nerdtree
-	url = https://github.com/scrooloose/nerdtree.git
 [submodule "bundle/vim-vimwiki"]
 	path = bundle/vim-vimwiki
 	url = git@github.com:vim-scripts/vimwiki.git

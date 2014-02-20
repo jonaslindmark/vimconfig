@@ -34,15 +34,12 @@ set incsearch
 set clipboard=unnamed
 set ssop-=options    " do not store global and local values in a session
 set ssop-=folds      " do not store folds
-set tags=/Users/jonasl/src/wrapp/tags
-let Tlist_Ctags_Cmd='/opt/local/bin/ctags'
+
+"set tags=/Users/jonasl/src/wrapp/tags
+" let Tlist_Ctags_Cmd='/opt/local/bin/ctags'
 
 " Ignore the following files
 set wildignore+=*.pyc,*.orig,*.egg-info,*.class,*.jar,tags,*node_modules*
-
-if exists('$TMUX')
-    set ttymouse=xterm2
-endif
 
 au FileType crontab set nobackup nowritebackup
 au FileType python set softtabstop=4 tabstop=4 shiftwidth=4
