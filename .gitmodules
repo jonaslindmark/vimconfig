@@ -1,60 +1,80 @@
 [submodule "bundle/pyflakes-pathogen"]
 	path = bundle/pyflakes-pathogen
-	url = git@github.com:mitechie/pyflakes-pathogen.git
+    url = git@github.com:mitechie/pyflakes-pathogen.git
+    ignore = dirty
 [submodule "bundle/supertab"]
 	path = bundle/supertab
 	url = git@github.com:ervandew/supertab.git
+    ignore = dirty
 [submodule "bundle/vim-fugitive"]
 	path = bundle/vim-fugitive
 	url = git@github.com:tpope/vim-fugitive.git
+    ignore = dirty
 [submodule "bundle/vim-coffee-script"]
 	path = bundle/vim-coffee-script
 	url = git@github.com:kchmck/vim-coffee-script.git
+    ignore = dirty
 [submodule "bundle/vim-powerline"]
 	path = bundle/vim-powerline
 	url = git@github.com:Lokaltog/vim-powerline.git
+    ignore = dirty
 [submodule "bundle/vim-ruby"]
 	path = bundle/vim-ruby
 	url = git@github.com:vim-ruby/vim-ruby.git
+    ignore = dirty
 [submodule "bundle/vim-scala"]
 	path = bundle/vim-scala
 	url = git@github.com:bmatheny/vim-scala.git
+    ignore = dirty
 [submodule "bundle/wombat256"]
 	path = bundle/wombat256
 	url = git@github.com:vim-scripts/wombat256.vim.git
+    ignore = dirty
 [submodule "bundle/vim-virtualenv"]
 	path = bundle/vim-virtualenv
 	url = git@github.com:jmcantrell/vim-virtualenv.git
+    ignore = dirty
 [submodule "bundle/ag.vim"]
 	path = bundle/ag.vim
 	url = git@github.com:epmatsw/ag.vim.git
+    ignore = dirty
 [submodule "bundle/ctrlp"]
 	path = bundle/ctrlp
 	url = git@github.com:kien/ctrlp.vim.git
+    ignore = dirty
 [submodule "bundle/go.vim"]
 	path = bundle/go.vim
 	url = git@github.com:anzaika/go.vim.git
+    ignore = dirty
 [submodule "bundle/VimClojure"]
 	path = bundle/VimClojure
 	url = git@github.com:vim-scripts/VimClojure.git
+    ignore = dirty
 [submodule "bundle/vim-handlebars"]
 	path = bundle/vim-handlebars
 	url = git://github.com/nono/vim-handlebars.git
+    ignore = dirty
 [submodule "bundle/vim-colors-solarized"]
 	path = bundle/vim-colors-solarized
 	url = git@github.com:altercation/vim-colors-solarized.git
+    ignore = dirty
 [submodule "bundle/nerdtree"]
 	path = bundle/nerdtree
 	url = https://github.com/scrooloose/nerdtree.git
+    ignore = dirty
 [submodule "bundle/vim-vimwiki"]
 	path = bundle/vim-vimwiki
 	url = git@github.com:vim-scripts/vimwiki.git
+    ignore = dirty
 [submodule "bundle/presenting"]
 	path = bundle/presenting
 	url = git@github.com:sotte/presenting.vim.git
+    ignore = dirty
 [submodule "bundle/vim-colorschemes"]
 	path = bundle/vim-colorschemes
 	url = git@github.com:flazz/vim-colorschemes.git
+    ignore = dirty
 [submodule "bundle/ack.vim"]
 	path = bundle/ack.vim
 	url = git@github.com:mileszs/ack.vim.git
+    ignore = dirty
