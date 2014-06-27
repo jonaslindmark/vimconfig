@@ -5,7 +5,8 @@ call pathogen#helptags()
 autocmd BufRead,BufNewFile *.tac set filetype=python
 
 syntax enable
-colorscheme molokai
+set t_Co=256
+colorscheme grb256
 
 set backspace=indent,eol,start " Make is possible to delete previous entries with backspace
 set number " Show line numbers
@@ -31,11 +32,13 @@ set visualbell
 set lazyredraw
 set laststatus=2
 set incsearch
-set clipboard=unnamed
+set clipboard=unnamedplus
 set ssop-=options    " do not store global and local values in a session
 set ssop-=folds      " do not store folds
-set tags=/Users/jonasl/src/wrapp/tags
-let Tlist_Ctags_Cmd='/opt/local/bin/ctags'
+"set tags=/Users/jonasl/src/wrapp/tags
+"let Tlist_Ctags_Cmd='/opt/local/bin/ctags'
+set tags=/home/lindmark/tags
+let Tlist_Ctags_Cmd='/usr/bin/ctags'
 
 " Ignore the following files
 set wildignore+=*.pyc,*.orig,*.egg-info,*.class,*.jar,tags,*node_modules*
@@ -75,7 +78,7 @@ map <Leader>g !python -m json.tool<CR>
 map <Leader>t :tabnew<CR>
 map <Leader>n :NERDTree<CR>
 map <Leader>s :mksession!<CR>
-nmap <leader>a :Ag! 
+nmap <leader>a :Ack! 
 
 let g:pyflakes_use_quickfix = 0
 let g:ctrlp_custom_ignore = {
