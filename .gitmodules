@@ -78,3 +78,6 @@
 	path = bundle/ack.vim
 	url = git@github.com:mileszs/ack.vim.git
     ignore = dirty
+[submodule "bundle/puppet-syntax-vim"]
+	path = bundle/puppet-syntax-vim
+	url = git@github.com:puppetlabs/puppet-syntax-vim.git
