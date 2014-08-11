@@ -35,8 +35,6 @@ set incsearch
 set clipboard=unnamedplus
 set ssop-=options    " do not store global and local values in a session
 set ssop-=folds      " do not store folds
-"set tags=/Users/jonasl/src/wrapp/tags
-"let Tlist_Ctags_Cmd='/opt/local/bin/ctags'
 set tags=/home/lindmark/tags
 let Tlist_Ctags_Cmd='/usr/bin/ctags'
 
@@ -100,3 +98,7 @@ function! InsertDebug()
 endfunction
 command! DebugIt :call InsertDebug()
 
+if has("gui_running")
+  " GUI is running or is about to start maximize gvim window
+  set lines=999 columns=999
+endif
