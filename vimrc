@@ -7,6 +7,8 @@ autocmd BufRead,BufNewFile *.tac set filetype=python
 syntax enable
 set t_Co=256
 colorscheme grb256
+"set background=dark
+"colorscheme solarized
 
 set backspace=indent,eol,start " Make is possible to delete previous entries with backspace
 set number " Show line numbers
@@ -51,6 +53,7 @@ au BufRead,BufNewFile {Gemfile,Rakefile,Vagrantfile,Thorfile,config.ru} set ft=r
 au BufRead,BufNewFile *.hamlc set ft=haml
 au BufNewFile,BufRead *.json set ft=javascript
 au BufNewFile,BufRead *.ejs set ft=html
+au BufNewFile,BufRead *.mpd set ft=xml
 
 " Enable backspace outside of newly inserted text
 let mapleader = ','
@@ -76,7 +79,7 @@ map <Leader>g !python -m json.tool<CR>
 map <Leader>t :tabnew<CR>
 map <Leader>n :NERDTree<CR>
 map <Leader>s :mksession!<CR>
-nmap <leader>a :Ack! 
+nmap <leader>a :Ag 
 
 let g:pyflakes_use_quickfix = 0
 let g:ctrlp_custom_ignore = {
@@ -90,6 +93,10 @@ let g:ctrlp_extensions = [
 let g:ctrlp_follow_symlinks = 1
 let g:ctrlp_working_path_mode = ''
 let g:ctrlp_clear_cache_on_exit = 0
+
+" Eclim stuff
+"let g:EclimCompletionMethod = 'omnifunc'
+"highlight Pmenu ctermbg=238 gui=bold
 
 let NERDTreeIgnore = ['\.pyc$']
 
