@@ -63,11 +63,11 @@ bindsym $mod+Shift+Down move down
 bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
-# split in horizontal orientation
-bindsym $mod+dash split h
+# split in horizontal
+bindsym $mod+v split v
 
-# split in vertical orientation
-bindsym $mod+bar split v
+# # split in vertical
+bindsym $mod+backslash split h
 
 # enter fullscreen mode for the focused container
 bindsym $mod+f fullscreen
@@ -148,7 +148,15 @@ bindsym Control+mod1+l exec "/usr/local/bin/lock"
 bindsym $mod+Control+Right exec "i3-msg move workspace to output right"
 bindsym $mod+Control+Left exec "i3-msg move workspace to output left"
 
+# Language swap
+bindsym $mod+Control+I exec "setxkbmap se"
+bindsym $mod+Control+U exec "setxkbmap us"
+
 exec "xset r rate 200 50"
+exec "dropbox start"
 exec --no-startup-id nm-applet &
 exec --no-startup-id unclutter &
-exec /usr/local/bin/autolock &
+exec --no-startup-id /usr/local/bin/autolock &
+
+for_window [class="Keepassx" instance="keepassx"] floating enable
+for_window [class="Nautilus" instance="file_progress"] floating enable
