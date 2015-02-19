@@ -81,3 +81,6 @@
 [submodule "bundle/puppet-syntax-vim"]
 	path = bundle/puppet-syntax-vim
 	url = git@github.com:puppetlabs/puppet-syntax-vim.git
+[submodule "bundle/rust.vim"]
+	path = bundle/rust.vim
+	url = git@github.com:wting/rust.vim.git
