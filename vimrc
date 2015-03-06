@@ -3,6 +3,7 @@ call pathogen#infect()
 call pathogen#helptags()
 
 autocmd BufRead,BufNewFile *.tac set filetype=python
+autocmd BufRead,BufNewFile *.ngt set filetype=handlebars
 
 syntax enable
 set t_Co=256
