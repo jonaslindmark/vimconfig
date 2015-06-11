@@ -69,10 +69,6 @@ nnoremap <C-l> <C-w>l
 nnoremap tn :tabn<CR>
 nnoremap tp :tabp<CR>
 
-" Resize
-map + <c-w>+
-map - <c-w>-
-
 autocmd FileType python set omnifunc=pythoncomplete#Complete
 au FileType ruby setl sw=2 sts=2 et
 
@@ -81,6 +77,9 @@ map <Leader>t :tabnew<CR>
 map <Leader>n :NERDTree<CR>
 map <Leader>s :mksession!<CR>
 nmap <leader>a :Ag 
+
+" XML format
+map <Leader>x :%s/></>\r</g<CR>:0<CR>=:$<CR>
 
 let g:pyflakes_use_quickfix = 0
 let g:ctrlp_custom_ignore = {
