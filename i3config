@@ -27,7 +27,7 @@ font pango:DejaVu Sans Mono 8
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec i3-sensible-terminal
+bindsym $mod+Return exec urxvt
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -134,6 +134,9 @@ bindsym Control+mod1+l exec "/usr/local/bin/lock"
 # Move workspace
 bindsym $mod+Control+Right exec "i3-msg move workspace to output right"
 bindsym $mod+Control+Left exec "i3-msg move workspace to output left"
+bindsym $mod+Shift+u exec --no-startup-id "pactl set-sink-volume 1 +5% && killall -SIGUSR1 i3status"
+bindsym $mod+Shift+d exec --no-startup-id "pactl set-sink-volume 1 -5% && killall -SIGUSR1 i3status"
+bindsym $mod+Shift+m exec --no-startup-id "pactl set-sink-mute 1 toggle && killall -SIGUSR1 i3status"
 
 # Language swap
 bindsym $mod+Control+I exec "setxkbmap se"
@@ -141,9 +144,11 @@ bindsym $mod+Control+U exec "setxkbmap us"
 
 exec "xset r rate 200 50"
 exec "dropbox start"
+exec --no-startup-id "sh /home/lindmark/.fehbg &"
 exec --no-startup-id nm-applet &
 exec --no-startup-id unclutter &
 exec --no-startup-id /usr/local/bin/autolock &
+exec --no-startup-id keynav &
 
 for_window [class="Keepassx" instance="keepassx"] floating enable
 for_window [class="Nautilus" instance="file_progress"] floating enable

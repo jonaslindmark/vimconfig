@@ -12,13 +12,10 @@ general {
 }
 
 order += "ipv6"
-order += "disk /"
-order += "run_watch DHCP"
-order += "run_watch VPN"
 order += "wireless wlan0"
 order += "ethernet eth0"
 order += "battery 0"
-order += "load"
+order += "battery 1"
 order += "tztime local"
 order += "volume master"
 
@@ -34,6 +31,12 @@ ethernet eth0 {
 }
 
 battery 0 {
+        path = "/sys/class/power_supply/BAT0/uevent"
+        format = "%status %percentage %remaining"
+}
+
+battery 1 {
+        path = "/sys/class/power_supply/BAT1/uevent"
         format = "%status %percentage %remaining"
 }
 
