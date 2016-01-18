@@ -84,3 +84,6 @@
 [submodule "bundle/vim-puppet"]
 	path = bundle/vim-puppet
 	url = git@github.com:rodjek/vim-puppet.git
+[submodule "tmux-logging"]
+	path = tmux-logging
+	url = https://github.com/tmux-plugins/tmux-logging
