@@ -1,46 +1,44 @@
 URxvt.scrollBar              : false
-URxvt.pointerColorBackground : #586E75
-URxvt.pointerColorForeground : #93A1A1
-URxvt.cursorColor            : #93A1A1
 URxvt.font                   : xft:DejaVu Sans Mono:pixelsize=12
-URxvt.termName               : rxvt-256color
+URxvt.termName               : xterm-256color
 
-! Colors
-URxvt.background : #29303a
-URxvt.foreground : #CCCCCC
-URxvt.colorBD : #FFFFFF
-URxvt.colorUL : #CCCC66
+! vim: ft=xdefaults
+*background: #151515
+*foreground: #888888
 ! black
-URxvt.color0  : #2E3436
-URxvt.color8  : #555753
+*color0: #1C1C1C
+*color8: #404040
 ! red
-URxvt.color1  : #DC322F
-URxvt.color9  : #E84F4F
+*color1: #B85335
+*color9: #CF6A4C
 ! green
-URxvt.color2  : #27ae60
-URxvt.color10 : #2ecc71
+*color2: #799D6A
+*color10: #99AD6A
 ! yellow
-URxvt.color3  : #f39c12
-URxvt.color11 : #f1c40f
+*color3: #FFB964
+*color11: #FAD07A
 ! blue
-URxvt.color4  : #268BD2
-URxvt.color12 : #6699FF
+*color4: #667899
+*color12: #8197BF
 ! magenta
-URxvt.color5  : #9933CC
-URxvt.color13 : #CC66FF
+*color5: #8787AF
+*color13: #C6B6EE
 ! cyan
-URxvt.color6  : #33CC99
-URxvt.color14 : #93A1A1
+*color6: #668799
+*color14: #8FBFDC
 ! white
-URxvt.color7  : #EEE8D5
-URxvt.color15 : #FDF6E3
+*color7: #888888
+*color15: #E8E8D3
 
-URxvt.perl-ext-common:  ...,font-size
+URxvt.perl-ext-common:  ...,font-size,clipboard
 URxvt.keysym.C-Up:     perl:font-size:increase
 URxvt.keysym.C-Down:   perl:font-size:decrease
 URxvt.keysym.C-S-Up:   perl:font-size:incglobal
 URxvt.keysym.C-S-Down: perl:font-size:decglobal
 
-URxvt.perl-ext:	  default,matcher
+URxvt.perl-ext:  default,matcher
 URxvt.url-launcher: google-chrome
 URxvt.matcher.button: 1
+
+URxvt.keysym.Shift-Control-V: perl:clipboard:paste
+URxvt.iso14755: False
