@@ -149,10 +149,10 @@ exec --no-startup-id nm-applet &
 exec --no-startup-id unclutter &
 exec --no-startup-id /usr/local/bin/autolock &
 exec --no-startup-id keynav &
+exec --no-startup-id xrdb /home/lindmark/.xresources
 
 for_window [class="Keepassx" instance="keepassx"] floating enable
 for_window [class="Nautilus" instance="file_progress"] floating enable
-
 
 bindsym $mod+m mode "move" focus floating
 mode "move" {
