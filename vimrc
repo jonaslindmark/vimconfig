@@ -94,6 +94,10 @@ let g:ctrlp_follow_symlinks = 1
 let g:ctrlp_working_path_mode = ''
 let g:ctrlp_clear_cache_on_exit = 0
 
+set hidden
+let g:racer_cmd="/home/lindmark/.cargo/bin/racer"
+let $RUST_SRC_PATH="/home/lindmark/3dparty/rust-lang/src/"
+
 " Eclim stuff
 "let g:EclimCompletionMethod = 'omnifunc'
 "highlight Pmenu ctermbg=238 gui=bold
