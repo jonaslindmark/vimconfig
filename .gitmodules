@@ -90,3 +90,6 @@
 [submodule "bundle/vim-racer.git"]
 	path = bundle/vim-racer.git
 	url = git@github.com:racer-rust/vim-racer.git
+[submodule "bundle/YouCompleteMe.git"]
+	path = bundle/YouCompleteMe.git
+	url = git@github.com:Valloric/YouCompleteMe.git
