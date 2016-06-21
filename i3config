@@ -140,9 +140,8 @@ bindsym $mod+Shift+m exec --no-startup-id "pactl set-sink-mute 1 toggle && killa
 
 # Language swap
 bindsym $mod+Control+I exec "setxkbmap se"
-bindsym $mod+Control+U exec "setxkbmap us"
+bindsym $mod+Control+U exec "setxkbmap -layout us -variant altgr-intl"
 
-exec "xset r rate 200 50"
 exec "dropbox start"
 exec --no-startup-id "sh /home/lindmark/.fehbg &"
 exec --no-startup-id nm-applet &
@@ -150,6 +149,8 @@ exec --no-startup-id unclutter &
 exec --no-startup-id /usr/local/bin/autolock &
 exec --no-startup-id keynav &
 exec --no-startup-id xrdb /home/lindmark/.xresources
+exec --no-startup-id "xset r rate 200 50"
+exec --no-startup-id xmodmap -e 'pointer = 3 2 1'
 
 for_window [class="Keepassx" instance="keepassx"] floating enable
 for_window [class="Nautilus" instance="file_progress"] floating enable

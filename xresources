@@ -1,5 +1,7 @@
+URxvt.perl-ext-common:  ...,font-size,clipboard
+
 URxvt.scrollBar              : false
-URxvt.font                   : xft:DejaVu Sans Mono:pixelsize=12
+URxvt.font                   : xft:DejaVu Sans Mono:pixelsize=13:antialias=false
 URxvt.termName               : xterm-256color
 
 ! vim: ft=xdefaults
@@ -30,7 +32,6 @@ URxvt*color14: #8FBFDC
 URxvt*color7: #888888
 URxvt*color15: #E8E8D3
 
-URxvt.perl-ext-common:  ...,font-size,clipboard
 URxvt.keysym.C-Up:     perl:font-size:increase
 URxvt.keysym.C-Down:   perl:font-size:decrease
 URxvt.keysym.C-S-Up:   perl:font-size:incglobal
@@ -40,5 +41,19 @@ URxvt.perl-ext:  default,matcher
 URxvt.url-launcher: google-chrome
 URxvt.matcher.button: 1
 
+URxvt.keysym.Shift-Control-C: perl:clipboard:copy
 URxvt.keysym.Shift-Control-V: perl:clipboard:paste
 URxvt.iso14755: False
+
+! Scrollback in pagers
+Rxvt.secondaryScreen: 1
+URxvt.secondaryScroll: 0
+URxvt.secondaryWheel: 1
+
+URxvt.resize-font.smaller: C-Down
+URxvt.resize-font.bigger: C-Up
+
+! Jump words in plain term
+URxvt.keysym.Control-Left:  \033[1;5D
+URxvt.keysym.Control-Right: \033[1;5C
+! Jump words in tmux
