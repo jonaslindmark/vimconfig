@@ -3,7 +3,7 @@ dotfiles
 
 Mainly my vim setup.
 
-Also tmux and zsh conf
+Also tmux, zsh, i3, top, x
 
 Requirements
 ==================
@@ -21,4 +21,5 @@ Install notes
 - ln -s ~/.vim/vimrc ~/.vimrc
 - ln -s ~/.vim/tmux.conf ~/.tmux.conf
 - echo "source ~/.vim/zshrc" >> ~/.zshrc
-
+- ln -s ~/.vim/lock /usr/local/bin/lock
+- ln -s ~/.vim/autolock /usr/local/bin/autolock
