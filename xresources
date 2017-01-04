@@ -1,7 +1,7 @@
 URxvt.perl-ext-common:  ...,font-size,clipboard
 
 URxvt.scrollBar              : false
-URxvt.font                   : xft:DejaVu Sans Mono:pixelsize=13:antialias=false
+URxvt.font                   : xft:DejaVu Sans Mono:pixelsize=11:antialias=false
 URxvt.termName               : xterm-256color
 
 ! vim: ft=xdefaults
@@ -32,8 +32,8 @@ URxvt*color14: #8FBFDC
 URxvt*color7: #888888
 URxvt*color15: #E8E8D3
 
-URxvt.keysym.C-Up:     perl:font-size:increase
-URxvt.keysym.C-Down:   perl:font-size:decrease
+!URxvt.keysym.C-Up:     perl:font-size:increase
+!URxvt.keysym.C-Down:   perl:font-size:decrease
 URxvt.keysym.C-S-Up:   perl:font-size:incglobal
 URxvt.keysym.C-S-Down: perl:font-size:decglobal
 
