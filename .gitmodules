@@ -86,3 +86,6 @@
 [submodule "bundle/vim-racer.git"]
 	path = bundle/vim-racer.git
 	url = git@github.com:racer-rust/vim-racer.git
+[submodule "bundle/ycm.git"]
+	path = bundle/ycm.git
+	url = https://github.com/Valloric/YouCompleteMe.git
