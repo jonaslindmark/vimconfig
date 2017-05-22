@@ -1,4 +1,5 @@
 #!/bin/sh
 # Usually located at /usr/local/bin/lock
 
-exec i3lock -e -c 000000 -n && echo mem > /sys/power/state
+exec i3lock -e -c 000000 -n
+#&& echo mem > /sys/power/state

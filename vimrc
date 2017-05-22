@@ -1,6 +1,6 @@
 " Pathogen to auto install plugins in ~/vim/bundle
-call pathogen#infect()
-call pathogen#helptags()
+execute pathogen#infect()
+execute pathogen#helptags()
 
 autocmd BufRead,BufNewFile *.tac set filetype=python
 autocmd BufRead,BufNewFile *.ngt set filetype=handlebars
@@ -75,6 +75,7 @@ au FileType ruby setl sw=2 sts=2 et
 map <Leader>g !python -m json.tool<CR>
 map <Leader>t :tabnew<CR>
 map <Leader>n :NERDTree<CR>
+map <Leader>f :NERDTreeFind<CR>
 map <Leader>s :mksession!<CR>
 nmap <leader>a :Ag 
 
