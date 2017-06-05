@@ -1,9 +1,10 @@
 #!/bin/sh
-# Usually located at /usr/local/bin/autolock
 
 exec xautolock \
   -detectsleep \
-  -time 8 -locker /usr/local/bin/lock \
+  -time 10 \
+  -locker /usr/local/bin/lock \
   -notify 30 \
   -notifier "notify-send -u critical -t 10000 -- 'LOCKING screen in 30 seconds'" \
-  -secure
+  -secure \
+  -corners -000
