@@ -62,9 +62,6 @@
 	path = bundle/vim-colorschemes
 	url = git@github.com:flazz/vim-colorschemes.git
     ignore = dirty
-[submodule "bundle/rust.vim"]
-	path = bundle/rust.vim
-	url = git@github.com:wting/rust.vim.git
 [submodule "bundle/vim-puppet"]
 	path = bundle/vim-puppet
 	url = git@github.com:rodjek/vim-puppet.git
