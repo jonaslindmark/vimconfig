@@ -148,14 +148,21 @@ bindsym $mod+Shift+m exec --no-startup-id "pactl set-sink-mute 1 toggle && killa
 bindsym $mod+Control+I exec "setxkbmap se"
 bindsym $mod+Control+U exec "setxkbmap -layout us -variant altgr-intl"
 
-for_window [class="Keepassx"] floating enable
+for_window [class="Keepassx" instance="keepassx"] floating enable
 for_window [class="KeePass2"] floating enable
 for_window [class="Nautilus" instance="file_progress"] floating enable
 
-exec "dropbox start"
-exec --no-startup-id "sh /home/lindmark/.fehbg &"
-exec --no-startup-id nm-applet &
-exec --no-startup-id volumeicon &
-exec --no-startup-id unclutter &
-exec --no-startup-id /usr/local/bin/autolock &
-exec --no-startup-id keynav &
+
+bindsym $mod+m mode "move" focus floating
+mode "move" {
+    bindsym $mod+Tab focus right
+
+    bindsym h     move left
+    bindsym j     move down
+    bindsym k     move up
+    bindsym l     move right
+
+    # back to normal: Enter or Escape
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+}
