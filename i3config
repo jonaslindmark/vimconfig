@@ -14,8 +14,6 @@ bindsym $mod+Return exec urxvt
 bindsym $mod+Shift+q kill
 
 # start dmenu (a program launcher)
-#bindsym $mod+d exec dmenu_run
-#bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
 bindsym $mod+d exec --no-startup-id rofi -i -show run
 bindsym $mod+Tab exec --no-startup-id rofi -i -show window
 
@@ -151,7 +149,6 @@ bindsym $mod+Control+U exec "setxkbmap -layout us -variant altgr-intl"
 for_window [class="Keepassx" instance="keepassx"] floating enable
 for_window [class="KeePass2"] floating enable
 for_window [class="Nautilus" instance="file_progress"] floating enable
-
 
 bindsym $mod+m mode "move" focus floating
 mode "move" {

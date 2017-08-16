@@ -7,8 +7,9 @@ autocmd BufRead,BufNewFile *.ngt set filetype=handlebars
 
 syntax enable
 set t_Co=256
-colorscheme grb256
 "set background=light
+"colorscheme grb256
+"set background=dark
 "colorscheme solarized
 
 set backspace=indent,eol,start " Make is possible to delete previous entries with backspace
