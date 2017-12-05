@@ -97,8 +97,8 @@ let g:ctrlp_working_path_mode = ''
 let g:ctrlp_clear_cache_on_exit = 0
 
 set hidden
-let g:racer_cmd="/home/lindmark/.cargo/bin/racer"
-let $RUST_SRC_PATH="/home/lindmark/3dparty/rust-lang/src/"
+"let g:racer_cmd="/usr/local/bin/racer"
+"let $RUST_SRC_PATH="$(rustc --print sysroot)/lib/rustlib/src/rust/src"
 
 let NERDTreeIgnore = ['\.pyc$']
 
@@ -107,7 +107,9 @@ function! InsertDebug()
 endfunction
 command! DebugIt :call InsertDebug()
 
-if has("gui_running")
+"if has("gui_running")
   " GUI is running or is about to start maximize gvim window
-  set lines=999 columns=999
-endif
+  "set lines=999 columns=999
+"endif
+
+let g:agprg="/usr/bin/rg --column"

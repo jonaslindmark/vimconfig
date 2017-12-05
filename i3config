@@ -4,6 +4,8 @@ set $mod Mod4
 
 font pango:DejaVu Sans Mono 8
 
+focus_follows_mouse no
+
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
@@ -16,6 +18,8 @@ bindsym $mod+Shift+q kill
 # start dmenu (a program launcher)
 bindsym $mod+d exec --no-startup-id rofi -i -show run
 bindsym $mod+Tab exec --no-startup-id rofi -i -show window
+
+bindsym $mod+z exec --no-startup-id /usr/local/bin/monitors
 
 bindsym $mod+Shift+minus move scratchpad
 bindsym $mod+minus scratchpad show
@@ -117,10 +121,10 @@ mode "move" {
     bindsym k move up
     bindsym l move right
 
-    bindsym Control+h move left
-    bindsym Control+j move down
-    bindsym Control+k move up
-    bindsym Control+l move right
+    bindsym Control+h exec /usr/local/bin/i3-move-big left
+    bindsym Control+j exec /usr/local/bin/i3-move-big down
+    bindsym Control+k exec /usr/local/bin/i3-move-big up
+    bindsym Control+l exec /usr/local/bin/i3-move-big right
 
     # back to normal: Enter or Escape
     bindsym Return mode "default"
@@ -139,9 +143,16 @@ bindsym Control+mod1+l exec "/usr/local/bin/lock"
 # Move workspace
 bindsym $mod+Control+Right exec "i3-msg move workspace to output right"
 bindsym $mod+Control+Left exec "i3-msg move workspace to output left"
-bindsym $mod+Shift+u exec --no-startup-id "pactl set-sink-volume 1 +5% && killall -SIGUSR1 i3status"
-bindsym $mod+Shift+d exec --no-startup-id "pactl set-sink-volume 1 -5% && killall -SIGUSR1 i3status"
-bindsym $mod+Shift+m exec --no-startup-id "pactl set-sink-mute 1 toggle && killall -SIGUSR1 i3status"
+
+bindsym XF86AudioLowerVolume exec --no-startup-id "amixer set Master 5%- unmute && killall -SIGUSR1 i3status"
+bindsym XF86AudioRaiseVolume exec --no-startup-id "amixer set Master 5%+ unmute && killall -SIGUSR1 i3status"
+bindsym $mod+Shift+u exec --no-startup-id "amixer set Master 5%+ unmute && killall -SIGUSR1 i3status"
+bindsym $mod+Shift+d exec --no-startup-id "amixer set Master 5%- unmute && killall -SIGUSR1 i3status"
+bindsym $mod+Shift+m exec --no-startup-id "amixer set Master mute && killall -SIGUSR1 i3status"
+bindsym $mod+Shift+b exec --no-startup-id "/usr/local/bin/backlight-cycle"
+
+bindsym XF86MonBrightnessUp exec xbacklight -inc 10 # increase screen brightness
+bindsym XF86MonBrightnessDown exec xbacklight -dec 10 # decrease screen brightness
 
 bindsym $mod+Control+I exec "setxkbmap se"
 bindsym $mod+Control+U exec "setxkbmap -layout us -variant altgr-intl"
@@ -150,16 +161,14 @@ for_window [class="Keepassx" instance="keepassx"] floating enable
 for_window [class="KeePass2"] floating enable
 for_window [class="Nautilus" instance="file_progress"] floating enable
 
-bindsym $mod+m mode "move" focus floating
-mode "move" {
-    bindsym $mod+Tab focus right
+bindsym $mod+y mode "$system_menu"
+set $system_menu (r)eboot (h)ibernate (s)uspend (S)hutdown
+mode "$system_menu" {
+     bindsym h exec systemctl hibernate, mode "default"
+     bindsym r exec systemctl reboot
+     bindsym s exec --no-startup-id "/usr/local/bin/lock", exec "systemctl suspend", mode "default"
+     bindsym Shift+s exec systemctl shutdown
 
-    bindsym h     move left
-    bindsym j     move down
-    bindsym k     move up
-    bindsym l     move right
-
-    # back to normal: Enter or Escape
-    bindsym Return mode "default"
-    bindsym Escape mode "default"
+     bindsym Return mode "default"
+     bindsym Escape mode "default"
 }
