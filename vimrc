@@ -79,6 +79,7 @@ map <Leader>n :NERDTree<CR>
 map <Leader>f :NERDTreeFind<CR>
 map <Leader>s :mksession!<CR>
 nmap <leader>a :Ag 
+nmap <C-p> :FZF<CR>
 
 " XML format
 map <Leader>x :%s/></>\r</g<CR>:0<CR>=:$<CR>
@@ -113,3 +114,10 @@ command! DebugIt :call InsertDebug()
 "endif
 
 let g:agprg="/usr/bin/rg --column"
+
+let g:fzf_buffers_jump = 1
+let g:fzf_action = {
+  \ 'ctrl-t': 'tab split',
+  \ 'ctrl-x': 'split',
+  \ 'ctrl-v': 'vsplit' }
+let g:fzf_layout = { 'down': '~40%' }
