@@ -10,7 +10,6 @@ set t_Co=256
 "set background=light
 "colorscheme grb256
 "set background=dark
-"colorscheme solarized
 
 set backspace=indent,eol,start " Make is possible to delete previous entries with backspace
 set number " Show line numbers
@@ -79,7 +78,7 @@ map <Leader>n :NERDTree<CR>
 map <Leader>f :NERDTreeFind<CR>
 map <Leader>s :mksession!<CR>
 nmap <leader>a :Ag 
-nmap <C-p> :FZF<CR>
+nmap <C-p> :call fzf#run(fzf#wrap({'source': 'find'}))<CR>
 
 " XML format
 map <Leader>x :%s/></>\r</g<CR>:0<CR>=:$<CR>
@@ -102,11 +101,6 @@ set hidden
 "let $RUST_SRC_PATH="$(rustc --print sysroot)/lib/rustlib/src/rust/src"
 
 let NERDTreeIgnore = ['\.pyc$']
-
-function! InsertDebug()
-    exe "normal Oimport ipdb;ipdb.set_trace()\e"
-endfunction
-command! DebugIt :call InsertDebug()
 
 "if has("gui_running")
   " GUI is running or is about to start maximize gvim window
