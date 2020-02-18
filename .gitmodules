@@ -65,3 +65,12 @@
 [submodule "bundle/fzf.vim"]
 	path = bundle/fzf.vim
 	url = https://github.com/junegunn/fzf.vim
+[submodule "bundle/vim-colos-solarized"]
+	path = bundle/vim-colos-solarized
+	url = git://github.com/altercation/vim-colors-solarized.git
+[submodule "bundle/vim-markdown"]
+	path = bundle/vim-markdown
+	url = https://github.com/gabrielelana/vim-markdown.git
+[submodule "bundle/ack.vim"]
+	path = bundle/ack.vim
+	url = https://github.com/mileszs/ack.vim.git
