@@ -10,14 +10,22 @@ focus_follows_mouse no
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec urxvt
+# bindsym $mod+Return exec urxvt
+bindsym $mod+Return exec st
+
+# screenshot
+bindsym Print --release exec "scrot -s /tmp/screenshot-$(date +%F_%T).png -e 'xclip -selection c -t image/png < $f'"
 
 # kill focused window
 bindsym $mod+Shift+q kill
 
 # start dmenu (a program launcher)
-bindsym $mod+d exec --no-startup-id rofi -i -show run
-bindsym $mod+Tab exec --no-startup-id rofi -i -show window
+bindsym $mod+d exec --no-startup-id "rofi -dpi 120 -i -combi-modi window,run -show combi -modi run,combi"
+bindsym $mod+Tab exec --no-startup-id "/usr/local/bin/focus-last --switch"
+bindsym $mod+Ctrl+0 exec --no-startup-id "wmctrl -a slack"
+bindsym $mod+Ctrl+3 exec --no-startup-id "wmctrl -a tmux"
+bindsym $mod+Ctrl+2 exec --no-startup-id "wmctrl -a calendar"
+bindsym $mod+equal exec --no-startup-id "pactl set-source-mute @DEFAULT_SOURCE@ toggle"
 
 bindsym $mod+z exec --no-startup-id /usr/local/bin/monitors
 
@@ -133,33 +141,35 @@ mode "move" {
 
 bar {
         mode dock
-        status_command i3status
-        #status_command i3blocks
+        #status_command i3status
+        status_command i3blocks
 }
 
 # Lock the screen
 bindsym Control+mod1+l exec "/usr/local/bin/lock"
 
 # Move workspace
-bindsym $mod+Control+Right exec "i3-msg move workspace to output right"
-bindsym $mod+Control+Left exec "i3-msg move workspace to output left"
+bindsym $mod+Control+h exec "i3-msg move workspace to output right"
+bindsym $mod+Control+j exec "i3-msg move workspace to output down"
+bindsym $mod+Control+k exec "i3-msg move workspace to output up"
+bindsym $mod+Control+l exec "i3-msg move workspace to output left"
 
 bindsym XF86AudioLowerVolume exec --no-startup-id "amixer set Master 5%- unmute && killall -SIGUSR1 i3status"
 bindsym XF86AudioRaiseVolume exec --no-startup-id "amixer set Master 5%+ unmute && killall -SIGUSR1 i3status"
-bindsym $mod+Shift+u exec --no-startup-id "amixer set Master 5%+ unmute && killall -SIGUSR1 i3status"
-bindsym $mod+Shift+d exec --no-startup-id "amixer set Master 5%- unmute && killall -SIGUSR1 i3status"
-bindsym $mod+Shift+m exec --no-startup-id "amixer set Master mute && killall -SIGUSR1 i3status"
+bindsym $mod+Shift+m [title="^Meet"] scratchpad show
+bindsym $mod+Shift+u [title="^term-float"] scratchpad show
 bindsym $mod+Shift+b exec --no-startup-id "/usr/local/bin/backlight-cycle"
 
 bindsym XF86MonBrightnessUp exec xbacklight -inc 10 # increase screen brightness
 bindsym XF86MonBrightnessDown exec xbacklight -dec 10 # decrease screen brightness
-
 bindsym $mod+Control+I exec "setxkbmap se"
 bindsym $mod+Control+U exec "setxkbmap -layout us -variant altgr-intl"
 
 for_window [class="Keepassx" instance="keepassx"] floating enable
 for_window [class="KeePass2"] floating enable
+for_window [class="Gscreenshot"] floating enable
 for_window [class="Nautilus" instance="file_progress"] floating enable
+for_window [class="Pavucontrol"] floating enable
 
 bindsym $mod+y mode "$system_menu"
 set $system_menu (r)eboot (h)ibernate (s)uspend (S)hutdown

@@ -1,0 +1,228 @@
+let SessionLoad = 1
+if &cp | set nocp | endif
+let s:so_save = &so | let s:siso_save = &siso | set so=0 siso=0
+let v:this_session=expand("<sfile>:p")
+silent only
+silent tabonly
+cd ~/src/ghe/metadata/merger2
+if expand('%') == '' && !&modified && line('$') <= 1 && getline(1) == ''
+  let s:wipebuf = bufnr('%')
+endif
+set shortmess=aoO
+argglobal
+%argdel
+set stal=2
+tabnew
+tabnew
+tabnew
+tabrewind
+edit NERD_tree_1
+set splitbelow splitright
+wincmd _ | wincmd |
+vsplit
+1wincmd h
+wincmd w
+set nosplitbelow
+set nosplitright
+wincmd t
+set winminheight=0
+set winheight=1
+set winminwidth=0
+set winwidth=1
+exe 'vert 1resize ' . ((&columns * 31 + 141) / 282)
+exe 'vert 2resize ' . ((&columns * 250 + 141) / 282)
+argglobal
+let s:l = 1 - ((0 * winheight(0) + 28) / 56)
+if s:l < 1 | let s:l = 1 | endif
+exe s:l
+normal! zt
+1
+normal! 0
+wincmd w
+argglobal
+enew
+wincmd w
+exe 'vert 1resize ' . ((&columns * 31 + 141) / 282)
+exe 'vert 2resize ' . ((&columns * 250 + 141) / 282)
+tabnext
+edit ~/src/ghe/content-ingestion/ingestion/spotify_content_ingestion/ingestion.py
+set splitbelow splitright
+wincmd _ | wincmd |
+vsplit
+1wincmd h
+wincmd w
+wincmd _ | wincmd |
+split
+1wincmd k
+wincmd w
+set nosplitbelow
+set nosplitright
+wincmd t
+set winminheight=0
+set winheight=1
+set winminwidth=0
+set winwidth=1
+exe 'vert 1resize ' . ((&columns * 72 + 141) / 282)
+exe '2resize ' . ((&lines * 27 + 29) / 59)
+exe 'vert 2resize ' . ((&columns * 209 + 141) / 282)
+exe '3resize ' . ((&lines * 28 + 29) / 59)
+exe 'vert 3resize ' . ((&columns * 209 + 141) / 282)
+argglobal
+let s:l = 1023 - ((365 * winheight(0) + 28) / 56)
+if s:l < 1 | let s:l = 1 | endif
+exe s:l
+normal! zt
+1023
+normal! 017|
+lcd ~/src/ghe/content-ingestion/ingestion
+wincmd w
+argglobal
+if bufexists("~/src/ghe/content-ingestion/ingestion/spotify_content_ingestion/ingestion.py") | buffer ~/src/ghe/content-ingestion/ingestion/spotify_content_ingestion/ingestion.py | else | edit ~/src/ghe/content-ingestion/ingestion/spotify_content_ingestion/ingestion.py | endif
+let s:l = 1208 - ((913 * winheight(0) + 13) / 27)
+if s:l < 1 | let s:l = 1 | endif
+exe s:l
+normal! zt
+1208
+normal! 034|
+lcd ~/src/ghe/content-ingestion/ingestion
+wincmd w
+argglobal
+if bufexists("~/src/ghe/content-ingestion/ingestion/spotify_content_ingestion/util.py") | buffer ~/src/ghe/content-ingestion/ingestion/spotify_content_ingestion/util.py | else | edit ~/src/ghe/content-ingestion/ingestion/spotify_content_ingestion/util.py | endif
+let s:l = 121 - ((13 * winheight(0) + 14) / 28)
+if s:l < 1 | let s:l = 1 | endif
+exe s:l
+normal! zt
+121
+normal! 0
+lcd ~/src/ghe/content-ingestion/ingestion
+wincmd w
+exe 'vert 1resize ' . ((&columns * 72 + 141) / 282)
+exe '2resize ' . ((&lines * 27 + 29) / 59)
+exe 'vert 2resize ' . ((&columns * 209 + 141) / 282)
+exe '3resize ' . ((&lines * 28 + 29) / 59)
+exe 'vert 3resize ' . ((&columns * 209 + 141) / 282)
+tabnext
+edit ~/src/ghe/content-ingestion/ingestion/tests/ddex_test.py
+set splitbelow splitright
+wincmd _ | wincmd |
+split
+1wincmd k
+wincmd _ | wincmd |
+vsplit
+1wincmd h
+wincmd w
+wincmd w
+set nosplitbelow
+set nosplitright
+wincmd t
+set winminheight=0
+set winheight=1
+set winminwidth=0
+set winwidth=1
+exe '1resize ' . ((&lines * 27 + 29) / 59)
+exe 'vert 1resize ' . ((&columns * 141 + 141) / 282)
+exe '2resize ' . ((&lines * 27 + 29) / 59)
+exe 'vert 2resize ' . ((&columns * 140 + 141) / 282)
+exe '3resize ' . ((&lines * 28 + 29) / 59)
+argglobal
+let s:l = 2858 - ((15 * winheight(0) + 13) / 27)
+if s:l < 1 | let s:l = 1 | endif
+exe s:l
+normal! zt
+2858
+normal! 014|
+lcd ~/src/ghe/content-ingestion/ingestion
+wincmd w
+argglobal
+if bufexists("~/src/ghe/content-ingestion/ingestion/spotify_content_ingestion/source/ddex.py") | buffer ~/src/ghe/content-ingestion/ingestion/spotify_content_ingestion/source/ddex.py | else | edit ~/src/ghe/content-ingestion/ingestion/spotify_content_ingestion/source/ddex.py | endif
+let s:l = 1108 - ((646 * winheight(0) + 13) / 27)
+if s:l < 1 | let s:l = 1 | endif
+exe s:l
+normal! zt
+1108
+normal! 0
+lcd ~/src/ghe/content-ingestion/ingestion
+wincmd w
+argglobal
+if bufexists("~/src/ghe/content-ingestion/ingestion/doc/schemas/spotify_9_0.xsd") | buffer ~/src/ghe/content-ingestion/ingestion/doc/schemas/spotify_9_0.xsd | else | edit ~/src/ghe/content-ingestion/ingestion/doc/schemas/spotify_9_0.xsd | endif
+let s:l = 428 - ((13 * winheight(0) + 14) / 28)
+if s:l < 1 | let s:l = 1 | endif
+exe s:l
+normal! zt
+428
+normal! 0
+lcd ~/src/ghe/content-ingestion/ingestion
+wincmd w
+exe '1resize ' . ((&lines * 27 + 29) / 59)
+exe 'vert 1resize ' . ((&columns * 141 + 141) / 282)
+exe '2resize ' . ((&lines * 27 + 29) / 59)
+exe 'vert 2resize ' . ((&columns * 140 + 141) / 282)
+exe '3resize ' . ((&lines * 28 + 29) / 59)
+tabnext
+edit ~/src/ghe/metadata/content-index/NERD_tree_3
+set splitbelow splitright
+wincmd _ | wincmd |
+vsplit
+1wincmd h
+wincmd w
+set nosplitbelow
+set nosplitright
+wincmd t
+set winminheight=0
+set winheight=1
+set winminwidth=0
+set winwidth=1
+exe 'vert 1resize ' . ((&columns * 31 + 141) / 282)
+exe 'vert 2resize ' . ((&columns * 250 + 141) / 282)
+argglobal
+let s:l = 1 - ((0 * winheight(0) + 28) / 56)
+if s:l < 1 | let s:l = 1 | endif
+exe s:l
+normal! zt
+1
+normal! 0
+lcd ~/src/ghe/metadata/content-index
+wincmd w
+argglobal
+if bufexists("~/src/ghe/metadata/content-index/scripts/content-indexer-patch") | buffer ~/src/ghe/metadata/content-index/scripts/content-indexer-patch | else | edit ~/src/ghe/metadata/content-index/scripts/content-indexer-patch | endif
+let s:l = 1 - ((0 * winheight(0) + 28) / 56)
+if s:l < 1 | let s:l = 1 | endif
+exe s:l
+normal! zt
+1
+normal! 0
+lcd ~/src/ghe/metadata/content-index
+wincmd w
+exe 'vert 1resize ' . ((&columns * 31 + 141) / 282)
+exe 'vert 2resize ' . ((&columns * 250 + 141) / 282)
+tabnext 3
+set stal=1
+badd +1 ~/src/ghe/metadata/merger2/NERD_tree_1
+badd +27 ~/src/ghe/content-ingestion/ingestion/spotify_content_ingestion/ingestion.py
+badd +3064 ~/src/ghe/content-ingestion/ingestion/tests/ddex_test.py
+badd +1 ~/src/ghe/metadata/content-index/NERD_tree_3
+badd +0 ~/src/ghe/content-ingestion/ingestion/spotify_content_ingestion/util.py
+badd +376 ~/src/ghe/content-ingestion/ingestion/spotify_content_ingestion/source/ddex.py
+badd +708 ~/src/ghe/content-ingestion/ingestion/doc/schemas/spotify_9_0.xsd
+badd +1 ~/src/ghe/metadata/content-index/scripts/content-indexer-patch
+badd +1 ~/src/ghe/content-ingestion/ingestion/spotify_content_ingestion/source/eveara.py
+badd +1 ~/src/ghe/content-ingestion/ingestion/spotify_content_ingestion/source/common.py
+badd +90 ~/src/ghe/content-ingestion/ingestion/spotify_content_ingestion/source/aggregated.py
+badd +420 ~/src/ghe/content-ingestion/ingestion/spotify_content_ingestion/feed.py
+badd +314 ~/src/ghe/content-ingestion/ingestion/tests/universal_test.py
+badd +56 ~/src/ghe/content-ingestion/ingestion/spotify_content_ingestion/source/universal.py
+badd +714 ~/src/ghe/content-ingestion/ingestion/doc/schemas/spotify_9_1.xsd
+if exists('s:wipebuf') && len(win_findbuf(s:wipebuf)) == 0
+  silent exe 'bwipe ' . s:wipebuf
+endif
+unlet! s:wipebuf
+set winheight=1 winwidth=20 shortmess=filnxtToOSc
+set winminheight=1 winminwidth=1
+let s:sx = expand("<sfile>:p:r")."x.vim"
+if file_readable(s:sx)
+  exe "source " . fnameescape(s:sx)
+endif
+let &so = s:so_save | let &siso = s:siso_save
+doautoall SessionLoadPost
+unlet SessionLoad
+" vim: set ft=vim :

@@ -74,3 +74,9 @@
 [submodule "bundle/ack.vim"]
 	path = bundle/ack.vim
 	url = https://github.com/mileszs/ack.vim.git
+[submodule "bundle/tender.vim"]
+	path = bundle/tender.vim
+	url = git@github.com:jacoborus/tender.vim.git
+[submodule "bundle/papercolor-theme"]
+	path = bundle/papercolor-theme
+	url = git@github.com:NLKNguyen/papercolor-theme.git
