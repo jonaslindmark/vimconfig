@@ -31,7 +31,7 @@ set autoread " Refresh files changed outside of vim if not changed in vim
 set foldenable foldmethod=indent " Folding on with indent
 set tags=
 set wildignore+=*.pyc,*.orig,*.egg-info,*.class,*.jar,tags,*node_modules*
-set clipboard=unnamedplus
+"set clipboard=unnamedplus
 set laststatus=2
 
 if exists('$TMUX')
