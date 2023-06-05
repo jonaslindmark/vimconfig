@@ -8,8 +8,9 @@ autocmd BufRead,BufNewFile *.ngt set filetype=handlebars
 syntax enable
 
 "colorscheme tender
-set background=dark
+set background=light
 colorscheme PaperColor
+set rtp+=/opt/homebrew/opt/fzf
 
 set t_Co=256
 set backspace=indent,eol,start " Make is possible to delete previous entries with backspace
@@ -32,6 +33,8 @@ set foldenable foldmethod=indent " Folding on with indent
 set tags=
 set wildignore+=*.pyc,*.orig,*.egg-info,*.class,*.jar,tags,*node_modules*
 "set clipboard=unnamedplus
+set clipboard=unnamed
+
 set laststatus=2
 
 if exists('$TMUX')
@@ -81,7 +84,7 @@ function! s:mylcd(folder)
     execute 'lcd ' a:folder
 endfunction
 
-nmap <C-x> :call fzf#run(fzf#wrap({'source': 'find /home/lindmark/src -maxdepth 5 -name ".git" -exec dirname {} \;', 'sink': function('<SID>mylcd')}))<CR>
+nmap <C-x> :call fzf#run(fzf#wrap({'source': 'find ~/src -maxdepth 5 -name ".git" -exec dirname {} \;', 'sink': function('<SID>mylcd')}))<CR>
 "nmap <C-w> :call fzf#run(fzf#wrap({'source': 'find /home/lindmark/Dropbox/vimwiki \;'}))<CR>
 
 let g:pyflakes_use_quickfix = 0
